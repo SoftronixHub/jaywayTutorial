@@ -5,6 +5,9 @@ using System.Web;
 using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
+using JaywayTutorial.Models;
+using System.Data.Entity;
+using JaywayTutorial.Migrations;
 
 namespace JaywayTutorial
 {
@@ -14,11 +17,15 @@ namespace JaywayTutorial
     {
         protected void Application_Start()
         {
+            // In Application_Start()
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<MyAppContext, Configuration>());
             AreaRegistration.RegisterAllAreas();
 
             WebApiConfig.Register(GlobalConfiguration.Configuration);
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+
         }
     }
 }

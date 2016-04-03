@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.Entity;
 namespace JaywayTutorial.Models
 {
-    public class MyAppContext:DBContext
+    public class MyAppContext:DbContext
     {
         public MyAppContext()
             : base("MyAppContext")
