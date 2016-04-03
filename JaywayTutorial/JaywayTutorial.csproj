@@ -119,6 +119,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201604031230441_InitialMigration.cs" />
+    <Compile Include="Migrations\201604031230441_InitialMigration.Designer.cs">
+      <DependentUpon>201604031230441_InitialMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\MyAppContext.cs" />
     <Compile Include="Models\Thing.cs" />
@@ -144,6 +148,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201604031230441_InitialMigration.resx">
+      <DependentUpon>201604031230441_InitialMigration.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
